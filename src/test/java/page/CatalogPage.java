@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CatalogPage extends AbstractPage {
     private final By catalogCategories = By.xpath("//span[@class='catalog-navigation-classifier__item-title-wrapper']");
-    private final By catalogSubcategories = By.xpath("//*[@id=\"container\"]/div/div/div/div/div[1]/div[4]/div/div[3]/div[1]/div/div/div[1]");
+    private final By catalogSubcategories = By.xpath("//*[@style='display: block;']//*[@class='catalog-navigation-list__aside-title']");
 
     public void choseCategory(Category category) {
         String xpathValue = category.getXpathValue();
