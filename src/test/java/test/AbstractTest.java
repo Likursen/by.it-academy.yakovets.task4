@@ -7,11 +7,12 @@ import utils.SingletonWebDriver;
 import utils.Utilities;
 
 public abstract class AbstractTest {
-    private final WebDriver webDriver = SingletonWebDriver.getWebDriver();
+    private static WebDriver webDriver;
     private static final String URL = "https://catalog.onliner.by/";
 
     @Before
     public void openSite() {
+        webDriver = SingletonWebDriver.getWebDriver();
         webDriver.get(URL);
     }
 
